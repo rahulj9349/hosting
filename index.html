@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<body >
+ <div class="container">
+<h2>Harish Jangid</h2>
+<div class=" col-5">
+
+  
+  <div class="form-group">
+    <label for="select_id">select</label>
+    <select class="form-control" onchange="val()" value='' id="select_id">
+	<option value="" selected disabled>-- Select --</option>
+      <option value="question1">1</option>
+      <option value="question2">2</option>
+      <option value="question3">3</option>
+      <option value="question4">4</option>
+      <option value="question5">5</option>
+    </select>
+  </div>
+  <div class="questions row" id="question1" style="display:none" >
+  <form id="harishQuestion" name="harishQuestion">
+  question 1
+  
+  <div class="form-group col-6">
+    <label for="value1">w</label>
+    <input type="text" class="form-control"   placeholder="w">
+  </div>
+  <div class="form-group col-6">
+    <label for="value2">t</label>
+    <input type="text" class="form-control"   placeholder="t">
+  </div>
+  <div class="form-group col-6">
+    <label for="value2">μ</label>
+    <input type="text" class="form-control"   placeholder="μ">
+  </div>
+  
+  <div class="form-group col-6">
+    <label for="value2">σ</label>
+    <input type="text" class="form-control"   placeholder="σ">
+  </div>
+  <div class="form-group col-6">
+    <label for="value2">R</label>
+    <input type="text" class="form-control"   placeholder="R">
+  </div>
+  <div class="form-group col-6">
+    <label for="value1">Angle</label>
+    <input type="text" class="form-control"   placeholder="Angle">
+  </div>
+  <div class="form-group col-6">
+    <label for="value1">Force 1</label>
+    <input type="text" class="form-control"   placeholder="Force 1">
+  </div>
+  <div class="form-group col-6">
+    <label for="value1">Force 2</label>
+    <input type="text" class="form-control"   placeholder="Force 2">
+  </div>
+  <div class="form-group col-6">
+    <label for="value1">Force 3</label>
+    <input type="text" class="form-control"   placeholder="Force 3">
+  </div>
+  <button type="button" onclick="myFunction()" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  <div class="questions" id="question2" style="display:none">
+  question 2
+  </div>
+  <div class="questions" id="question3" style="display:none">
+  question 3
+  </div>
+  <div class="questions" id="question4" style="display:none">
+  question 4
+  </div>
+  <div class="questions" id="question5" style="display:none">
+  question 5
+  </div>
+  
+  
+
+
+</div>
+</div>
+<script>
+function val() {
+    d = document.getElementById("select_id").value;
+	list = document.getElementsByClassName("questions")	
+	for (let item of list) {
+	item.style.display='none'
+	}
+	document.getElementById(d).style.display = "block";
+}
+</script>
+
+<script>
+function myFunction() {
+debugger;
+	var arr=[]
+	lengthloop = document.getElementById("harishQuestion").elements
+	for (let i = 0; i < lengthloop.length-1; i++) {
+	arr.push(lengthloop[i].value)
+	}
+	console.log(arr)
+	switch(d) {
+  case "question1":
+	var Pone = arr[3]*arr[0]*arr[1]
+	var Ptwo = Pone/(Math.exp(arr[2]*arr[5]*22/180/7))
+	var P = (Pone*arr[6]-Ptwo*arr[7])/(arr[7]+arr[8])
+	var torque = (Pone-Ptwo)*arr[4]
+	
+	if(arr[7]/arr[6] > Math.exp(arr[2]*arr[5]*22/180/7)){
+	alert('The Break is not self-locking');
+	}
+	else{
+	alert('The Break is self-locking');
+	}
+    
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+	
+}
+</script>
+
+</body>
+</html>
